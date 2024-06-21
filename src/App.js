@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+
+
 import './App.css';
+import Header from './Header';
+import Products from './Products';
+import { useState } from 'react';
+
+
+
+
+
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  function doSomething(data)
+  {
+    console.log("hello iam a click"+data)
+  }
+
+
+return (
+<div className="App">
+
+ 
+ <h3>Name</h3>
+ <input type='text' placeholder='Enter Name'/>
+
+
+   <Header/>
+   <Products/>
+
+   <button className='btn' onClick={(event)=>{
+    console.log(event)
+doSomething("Rakesh")
+
+   }}>Click</button> 
+   </div>
   );
 }
 
